@@ -42,6 +42,45 @@
             ,productHeader: "Dori nomi"
             ,priceHeader: "Narxi (so'm)"
             ,quantityHeader: "Miqdori"
+            ,management: "Boshqaruv"
+            ,overview: "Umumiy ko'rinish"
+            ,inventory: "Inventar"
+            ,addMedicine: "Mahsulot qo'shish"
+            ,salesWindow: "Sotuv oynasi"
+            ,account: "Hisob"
+            ,signOut: "Chiqish"
+            ,pharmacyManagement: "Dorixona boshqaruvi"
+            ,greeting: "Assalomu alaykum,"
+            ,todayControl: "Bugungi nazorat"
+            ,inventoryInHand: "Inventaringiz qo'lingizda."
+            ,inventoryDescription: "Qoldiqni kuzating, yangi mahsulot qo'shing va sotuvni tez yakunlang."
+            ,newSale: "Yangi sotuv"
+            ,active: "Faol"
+            ,total: "Jami"
+            ,attention: "E'tibor"
+            ,valued: "Baholangan"
+            ,productTypes: "Turdagi mahsulotlar"
+            ,stockUnits: "Ombordagi birliklar"
+            ,lowStock: "Kam qolgan mahsulotlar"
+            ,inventoryValue: "Inventar qiymati, so'm"
+            ,quickControl: "Tezkor nazorat"
+            ,seeAll: "Barchasini ko'rish →"
+            ,workflow: "Ish jarayoni"
+            ,quickActions: "Tezkor amallar"
+            ,restock: "Omborni to'ldiring"
+            ,startSale: "Sotuvni boshlash"
+            ,completeOrder: "Buyurtmani rasmiylashtiring"
+            ,checkInventory: "Barcha qoldiqni tekshiring"
+            ,recentInventory: "Inventar"
+            ,recentProducts: "So'nggi qo'shilgan mahsulotlar"
+            ,newProduct: "+ Yangi mahsulot"
+            ,productStatus: "Holat"
+            ,statusAvailable: "Mavjud"
+            ,statusLow: "Kam qoldi"
+            ,units: "dona"
+            ,allGood: "Hammasi joyida"
+            ,noLowStock: "Kam qolgan mahsulotlar mavjud emas."
+            ,left: "qoldi"
         },
         ru: {
             registerTitle: "Регистрация",
@@ -83,6 +122,45 @@
             ,productHeader: "Название лекарства"
             ,priceHeader: "Цена (сум)"
             ,quantityHeader: "Количество"
+            ,management: "Управление"
+            ,overview: "Обзор"
+            ,inventory: "Инвентарь"
+            ,addMedicine: "Добавить товар"
+            ,salesWindow: "Окно продаж"
+            ,account: "Аккаунт"
+            ,signOut: "Выйти"
+            ,pharmacyManagement: "Управление аптекой"
+            ,greeting: "Здравствуйте,"
+            ,todayControl: "Контроль на сегодня"
+            ,inventoryInHand: "Ваш инвентарь под контролем."
+            ,inventoryDescription: "Следите за остатками, добавляйте товары и быстро завершайте продажи."
+            ,newSale: "Новая продажа"
+            ,active: "Активно"
+            ,total: "Всего"
+            ,attention: "Внимание"
+            ,valued: "Оценено"
+            ,productTypes: "Видов товаров"
+            ,stockUnits: "Единиц на складе"
+            ,lowStock: "Товары с низким остатком"
+            ,inventoryValue: "Стоимость инвентаря, сум"
+            ,quickControl: "Быстрый контроль"
+            ,seeAll: "Посмотреть все →"
+            ,workflow: "Рабочий процесс"
+            ,quickActions: "Быстрые действия"
+            ,restock: "Пополните склад"
+            ,startSale: "Начать продажу"
+            ,completeOrder: "Оформите заказ"
+            ,checkInventory: "Проверьте все остатки"
+            ,recentInventory: "Инвентарь"
+            ,recentProducts: "Последние добавленные товары"
+            ,newProduct: "+ Новый товар"
+            ,productStatus: "Статус"
+            ,statusAvailable: "В наличии"
+            ,statusLow: "Мало осталось"
+            ,units: "шт."
+            ,allGood: "Всё в порядке"
+            ,noLowStock: "Товаров с низким остатком нет."
+            ,left: "осталось"
         },
         en: {
             registerTitle: "Create account",
@@ -124,6 +202,45 @@
             ,productHeader: "Medicine name"
             ,priceHeader: "Price (sum)"
             ,quantityHeader: "Quantity"
+            ,management: "Management"
+            ,overview: "Overview"
+            ,inventory: "Inventory"
+            ,addMedicine: "Add product"
+            ,salesWindow: "Sales desk"
+            ,account: "Account"
+            ,signOut: "Sign out"
+            ,pharmacyManagement: "Pharmacy management"
+            ,greeting: "Welcome,"
+            ,todayControl: "Today's control"
+            ,inventoryInHand: "Your inventory, at a glance."
+            ,inventoryDescription: "Track stock, add products, and complete sales quickly."
+            ,newSale: "New sale"
+            ,active: "Active"
+            ,total: "Total"
+            ,attention: "Attention"
+            ,valued: "Valued"
+            ,productTypes: "Product types"
+            ,stockUnits: "Units in stock"
+            ,lowStock: "Low-stock products"
+            ,inventoryValue: "Inventory value, sum"
+            ,quickControl: "Quick control"
+            ,seeAll: "View all →"
+            ,workflow: "Workflow"
+            ,quickActions: "Quick actions"
+            ,restock: "Restock the warehouse"
+            ,startSale: "Start a sale"
+            ,completeOrder: "Complete the order"
+            ,checkInventory: "Check all stock"
+            ,recentInventory: "Inventory"
+            ,recentProducts: "Recently added products"
+            ,newProduct: "+ New product"
+            ,productStatus: "Status"
+            ,statusAvailable: "Available"
+            ,statusLow: "Low stock"
+            ,units: "units"
+            ,allGood: "All stock is healthy"
+            ,noLowStock: "There are no low-stock products."
+            ,left: "left"
         }
     };
 
@@ -163,8 +280,15 @@
         input.value = formatted;
     }
 
+    function getSystemLanguage() {
+        var navigatorLanguage = (navigator.language || navigator.userLanguage || 'uz').toLowerCase();
+        if (navigatorLanguage.indexOf('ru') === 0) return 'ru';
+        if (navigatorLanguage.indexOf('en') === 0) return 'en';
+        return 'uz';
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
-        var savedLanguage = localStorage.getItem('pharmacy-language') || 'uz';
+        var savedLanguage = localStorage.getItem('pharmacy-language') || getSystemLanguage();
         applyLanguage(savedLanguage);
 
         var languageSelect = document.getElementById('languageSelect');
@@ -176,7 +300,7 @@
 
         var themeToggle = document.getElementById('themeToggle');
         var deviceTheme = window.matchMedia('(prefers-color-scheme: dark)');
-        var savedTheme = localStorage.getItem('pharmacy-theme');
+        var savedTheme = localStorage.getItem('pharmacy-theme-mode') || 'device';
 
         function setTheme(isDark) {
             document.body.classList.toggle('dark-theme', isDark);
@@ -186,22 +310,42 @@
             }
         }
 
-        function syncDeviceTheme() {
-            setTheme(savedTheme === 'dark' || (savedTheme !== 'light' && deviceTheme.matches));
+        function syncThemeFromPreference() {
+            var shouldUseDark = savedTheme === 'dark' || (savedTheme === 'device' && deviceTheme.matches);
+            setTheme(shouldUseDark);
         }
 
-        syncDeviceTheme();
+        function updateThemePreference(mode) {
+            savedTheme = mode;
+            localStorage.setItem('pharmacy-theme-mode', mode);
+            syncThemeFromPreference();
+        }
+
+        syncThemeFromPreference();
         if (deviceTheme.addEventListener) {
-            deviceTheme.addEventListener('change', syncDeviceTheme);
-        } else {
-            deviceTheme.addListener(syncDeviceTheme);
+            deviceTheme.addEventListener('change', function () {
+                if (savedTheme === 'device') {
+                    syncThemeFromPreference();
+                }
+            });
+        } else if (deviceTheme.addListener) {
+            deviceTheme.addListener(function () {
+                if (savedTheme === 'device') {
+                    syncThemeFromPreference();
+                }
+            });
         }
         if (themeToggle) {
             themeToggle.addEventListener('click', function () {
-                var isDark = !document.body.classList.contains('dark-theme');
-                savedTheme = isDark ? 'dark' : 'light';
-                localStorage.setItem('pharmacy-theme', savedTheme);
-                setTheme(isDark);
+                if (savedTheme === 'device') {
+                    updateThemePreference(document.body.classList.contains('dark-theme') ? 'light' : 'dark');
+                    return;
+                }
+                if (savedTheme === 'dark') {
+                    updateThemePreference('light');
+                    return;
+                }
+                updateThemePreference('device');
             });
         }
 
